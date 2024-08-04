@@ -1,3 +1,7 @@
-site_name: My Docs
+site_name: "💾 Disruptive Architectures: IOT, Big Data e IA 💾"
 
 theme: material
+
+nav:
+  - "Programação de Aulas": index.md
+  - "Fundamentos e Ferramentas de Big Data": "fundbig.md"

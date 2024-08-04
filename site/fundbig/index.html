@@ -1,0 +1,783 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
+    
+    
+      
+        <title>Fundamentos e Ferramentas de Big Data - 💾 Disruptive Architectures: IOT, Big Data e IA 💾</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.76a95c52.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fundamentos-e-ferramentas-de-big-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="💾 Disruptive Architectures: IOT, Big Data e IA 💾" class="md-header__button md-logo" aria-label="💾 Disruptive Architectures: IOT, Big Data e IA 💾" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            💾 Disruptive Architectures: IOT, Big Data e IA 💾
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fundamentos e Ferramentas de Big Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="💾 Disruptive Architectures: IOT, Big Data e IA 💾" class="md-nav__button md-logo" aria-label="💾 Disruptive Architectures: IOT, Big Data e IA 💾" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    💾 Disruptive Architectures: IOT, Big Data e IA 💾
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programação de Aulas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Fundamentos e Ferramentas de Big Data
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentos e Ferramentas de Big Data
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revisao-de-banco-de-dados-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revisão de Banco de Dados Rápida!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao-e-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução e Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceitos-acid" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Conceitos ACID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-principais-ferramentas-de-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Principais Ferramentas de Banco de Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Principais Ferramentas de Banco de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 MySQL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-comparacao-com-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Comparação com Hadoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-comparacao-com-clickhouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Comparação com ClickHouse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Comparação com ClickHouse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-clickhouse-e-mergetree" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 ClickHouse e MergeTree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adendo-o-que-e-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adendo: O que é OLAP?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adendo: O que é OLAP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-do-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características do OLAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de OLAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacoes-de-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicações de OLAP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoestudos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoestudos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revisao-de-banco-de-dados-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revisão de Banco de Dados Rápida!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao-e-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução e Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceitos-acid" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Conceitos ACID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-principais-ferramentas-de-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Principais Ferramentas de Banco de Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Principais Ferramentas de Banco de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 MySQL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-comparacao-com-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Comparação com Hadoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-comparacao-com-clickhouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Comparação com ClickHouse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Comparação com ClickHouse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-clickhouse-e-mergetree" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 ClickHouse e MergeTree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adendo-o-que-e-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adendo: O que é OLAP?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adendo: O que é OLAP?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-do-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características do OLAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de OLAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacoes-de-olap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicações de OLAP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoestudos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoestudos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="fundamentos-e-ferramentas-de-big-data">Fundamentos e Ferramentas de Big Data</h1>
+<h2 id="revisao-de-banco-de-dados-rapida">Revisão de Banco de Dados Rápida!</h2>
+<h2 id="1-introducao-e-objetivos">1. Introdução e Objetivos</h2>
+<p>A importância da integridade e confiabilidade dos dados é reconhecida firmemente pela indústria da tecnologia da informação. Os conceitos ACID são fundamentais para garantir que os sistemas de banco de dados mantenham a consistência dos dados em meio a operações complexas e concorrentes. Além disso, a escolha da ferramenta de banco de dados adequada pode influenciar significativamente o desempenho e a escalabilidade das aplicações.</p>
+<h2 id="2-conceitos-acid">2. Conceitos ACID</h2>
+<p>Os conceitos ACID são fundamentais para garantir a confiabilidade e a integridade dos dados em um sistema de banco de dados. ACID é um acrônimo que representa:</p>
+<ol>
+<li>
+<p><strong>Atomicidade (Atomicity)</strong>: Refere-se à propriedade de que uma transação deve ser tratada como uma unidade indivisível. Ou seja, todas as operações dentro de uma transação devem ser concluídas com sucesso; caso contrário, a transação é revertida. Isso garante que o banco de dados não fique em um estado inconsistente.</p>
+</li>
+<li>
+<p><strong>Consistência (Consistency)</strong>: Garante que uma transação leva o banco de dados de um estado válido para outro estado válido. Qualquer dado escrito no banco de dados deve ser válido de acordo com todas as regras definidas, incluindo restrições, gatilhos, cascatas, etc.</p>
+</li>
+<li>
+<p><strong>Isolamento (Isolation)</strong>: Garante que as operações de transações concorrentes não interfiram umas nas outras. O nível de isolamento determina como e quando as mudanças feitas em uma transação se tornam visíveis para outras transações.</p>
+</li>
+<li>
+<p><strong>Durabilidade (Durability)</strong>: Garante que, uma vez que uma transação foi confirmada, ela permanecerá assim mesmo em caso de falha do sistema. Isso é alcançado através do uso de logs de transação e backups.</p>
+</li>
+</ol>
+<h2 id="3-principais-ferramentas-de-banco-de-dados">3. Principais Ferramentas de Banco de Dados</h2>
+<h3 id="31-postgresql">3.1 PostgreSQL</h3>
+<p>O PostgreSQL é um dos sistemas de gerenciamento de banco de dados relacionais mais avançados e populares disponíveis hoje. Ele é conhecido por sua robustez, flexibilidade e conformidade com os padrões SQL. Algumas características incluem:</p>
+<ul>
+<li><strong>Suporte ACID completo</strong></li>
+<li><strong>Suporte a JSON e JSONB para dados não estruturados</strong></li>
+<li><strong>Extensibilidade com funções, operadores e tipos de dados personalizados</strong></li>
+<li><strong>Comunidade ativa e grande quantidade de recursos e documentação</strong></li>
+</ul>
+<h3 id="32-mysql">3.2 MySQL</h3>
+<p>O MySQL é outro sistema de gerenciamento de banco de dados relacional muito popular, especialmente no desenvolvimento web. Ele é conhecido por sua velocidade e facilidade de uso. Algumas características incluem:</p>
+<ul>
+<li><strong>Suporte ACID com o mecanismo de armazenamento InnoDB</strong></li>
+<li><strong>Ampla adoção e suporte pela comunidade</strong></li>
+<li><strong>Compatibilidade com diversas linguagens de programação</strong></li>
+</ul>
+<h2 id="4-comparacao-com-hadoop">4. Comparação com Hadoop</h2>
+<p>O Hadoop é uma plataforma de software de código aberto usada para computação distribuída e armazenamento de grandes volumes de dados. Ele é composto por vários módulos, incluindo o Hadoop Distributed File System (HDFS) e o MapReduce. Comparado com bancos de dados relacionais como PostgreSQL e MySQL:</p>
+<ul>
+<li><strong>Hadoop</strong> é ideal para processamento de grandes volumes de dados não estruturados e semi-estruturados.</li>
+<li><strong>Bancos de dados relacionais</strong> são ideais para transações ACID e consultas complexas em dados estruturados.</li>
+</ul>
+<h2 id="5-comparacao-com-clickhouse">5. Comparação com ClickHouse</h2>
+<p>O ClickHouse é um sistema de gerenciamento de banco de dados de coluna projetado para consultas analíticas em tempo real. Comparado com bancos de dados relacionais tradicionais:</p>
+<ul>
+<li><strong>ClickHouse</strong> é otimizado para leitura e consultas analíticas, com alta performance em consultas complexas em grandes volumes de dados.</li>
+<li><strong>Bancos de dados relacionais</strong> são mais adequados para operações transacionais e consultas que exigem conformidade ACID.</li>
+</ul>
+<h3 id="51-clickhouse-e-mergetree">5.1 ClickHouse e MergeTree</h3>
+<p>O ClickHouse utiliza uma estrutura de dados chamada <strong>MergeTree</strong> para armazenar dados de forma eficiente. O MergeTree permite:</p>
+<ul>
+<li><strong>Particionamento</strong>: Divisão dos dados em segmentos menores para facilitar a consulta.</li>
+<li><strong>Indexação</strong>: Criação de índices para acelerar as consultas.</li>
+<li><strong>Merge</strong>: Combinação de partes menores dos dados em partes maiores para otimizar o armazenamento e a performance.</li>
+</ul>
+<h2 id="adendo-o-que-e-olap">Adendo: O que é OLAP?</h2>
+<p>OLAP (Online Analytical Processing) é uma tecnologia que permite a análise rápida de grandes volumes de dados armazenados em um banco de dados multidimensional. OLAP é amplamente utilizado em aplicações de Business Intelligence (BI) para realizar consultas complexas e análises de dados.</p>
+<h3 id="caracteristicas-do-olap">Características do OLAP</h3>
+<ul>
+<li><strong>Multidimensionalidade</strong>: OLAP permite organizar dados em múltiplas dimensões, facilitando a visualização e análise de informações de diferentes perspectivas.</li>
+<li><strong>Velocidade</strong>: OLAP é otimizado para consultas rápidas e análises interativas, permitindo que os usuários obtenham insights em tempo real.</li>
+<li><strong>Agregação</strong>: OLAP suporta a agregação de dados, permitindo cálculos como somas, médias e contagens em diferentes níveis de granularidade.</li>
+<li><strong>Hierarquias</strong>: OLAP permite a definição de hierarquias dentro das dimensões, facilitando a navegação e análise de dados em diferentes níveis de detalhe.</li>
+</ul>
+<h3 id="tipos-de-olap">Tipos de OLAP</h3>
+<ol>
+<li><strong>ROLAP (Relational OLAP)</strong>: Utiliza bancos de dados relacionais para armazenar e gerenciar dados. As consultas OLAP são traduzidas em consultas SQL complexas.</li>
+<li><strong>MOLAP (Multidimensional OLAP)</strong>: Utiliza bancos de dados multidimensionais (cubos OLAP) para armazenar dados. Oferece desempenho superior para consultas complexas.</li>
+<li><strong>HOLAP (Hybrid OLAP)</strong>: Combina as abordagens ROLAP e MOLAP, aproveitando os pontos fortes de ambos os tipos.</li>
+</ol>
+<h3 id="aplicacoes-de-olap">Aplicações de OLAP</h3>
+<p>OLAP é amplamente utilizado em várias áreas, incluindo:</p>
+<ul>
+<li><strong>Análise de Vendas</strong>: Para analisar tendências de vendas, desempenho de produtos e comportamento de clientes.</li>
+<li><strong>Finanças</strong>: Para análise de lucros, despesas e previsões financeiras.</li>
+<li><strong>Marketing</strong>: Para avaliar a eficácia das campanhas de marketing e segmentar mercados.</li>
+<li><strong>Operações</strong>: Para monitorar e otimizar processos operacionais e logísticos.</li>
+</ul>
+<p>OLAP é uma ferramenta poderosa para transformar dados brutos em insights acionáveis, permitindo que as organizações tomem decisões informadas e baseadas em dados.</p>
+<hr />
+<div class="container m-1">
+    <div class="row">
+        <div class="col-12">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://slides.com/afonsobrandao/fundbigdata/embed?style=light" title="Fundamentos de Engenharia de Dados e BigData" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 id="autoestudos">Autoestudos</h2>
+<div class="container m-1">
+    <div class="row">
+        <div class="col-12">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pQXr-xXhKNs?si=6a-ZY8l-4_WpXOLN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container m-1">
+    <div class="row">
+        <div class="col-12">
+            <a href="https://www.oracle.com/br/big-data/what-is-big-data/#:~:text=A%20defini%C3%A7%C3%A3o%20de%20big%20data,de%20novas%20fontes%20de%20dados." class="btn btn-primary w-100" style="color: white;" role="button">BigData sem Mistério</a>
+        </div>
+    </div>
+</div>
+
+<div class="container m-1">
+    <div class="row">
+        <div class="col-12">
+            <a href="https://www.researchgate.net/publication/366380179_BIG_DATA_FUNDAMENTOS_E_APLICACAO_NAS_EMPRESAS" class="btn btn-primary w-100" style="color: white;" role="button">Fundamentos e Aplicação de BigData em Empresas</a>
+        </div>
+    </div>
+</div>
+
+<p><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></p>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style>
+    .embed-responsive-16by9 {
+        padding-bottom: 56.25%; /* Proporção 16:9 */
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+    .embed-responsive-16by9 iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
