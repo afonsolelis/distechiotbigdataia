@@ -4,6 +4,8 @@
 
 Neste servidor vocês podem estudar, ver vagas de emprego e tirar dúvidas com o professor.
 
+# Sala: 🕹️ Lab4 Principal
+
 # Programação de Aulas
 
 | Data   | Aula                                                        |
