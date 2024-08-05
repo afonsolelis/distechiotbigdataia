@@ -400,3 +400,140 @@ pyinstaller --onefile --hidden-import 'module_name' your-script.py
         height: 100%;
     }
 </style>
+
+# Prática
+
+## Passo a Passo: Criação de uma Aplicação Simples com Tkinter e PyInstaller
+
+### 1. Instalação do Python
+
+Certifique-se de ter o Python instalado em sua máquina. Você pode baixá-lo do site oficial [python.org](https://www.python.org/).
+
+### 2. Criando o Script Tkinter
+
+Crie um arquivo Python chamado `app.py` e adicione o seguinte código:
+
+```python
+import tkinter as tk
+
+def mostrar_texto():
+    texto = entrada.get()
+    label.config(text=texto)
+
+# Criação da janela principal
+root = tk.Tk()
+root.title("Minha Aplicação Tkinter")
+
+# Entrada de Texto
+entrada = tk.Entry(root)
+entrada.pack(padx=10, pady=10)
+
+# Botão
+botao = tk.Button(root, text="Mostrar Texto", command=mostrar_texto)
+botao.pack(padx=10, pady=10)
+
+# Rótulo
+label = tk.Label(root, text="")
+label.pack(padx=10, pady=10)
+
+# Iniciando o mainloop
+root.mainloop()
+```
+
+Este script cria uma janela simples com um campo de entrada de texto, um botão e um rótulo que exibe o texto inserido.
+
+### 3. Executando o Script
+
+Para testar a aplicação, execute o script com o comando:
+
+```sh
+python app.py
+```
+
+### 4. Instalação do PyInstaller
+
+Instale o PyInstaller usando o `pip`:
+
+```sh
+pip install pyinstaller
+```
+
+### 5. Criando o Executável
+
+Para criar um executável básico, use o comando:
+
+```sh
+pyinstaller app.py
+```
+
+Este comando cria um diretório `dist` contendo o executável e todas as bibliotecas necessárias.
+
+### 6. Criando um Executável Único
+
+Para criar um único arquivo executável, use a opção `--onefile`:
+
+```sh
+pyinstaller --onefile app.py
+```
+
+### 7. Criando um Executável sem Console e com Ícone Personalizado
+
+Para criar um executável que não abre uma janela de console e usa um ícone personalizado, você precisa garantir que o arquivo de ícone (`icon.ico`) esteja no caminho correto. Coloque o arquivo `icon.ico` no mesmo diretório que o seu script `app.py`. Em seguida, use as opções `--noconsole` e `--icon`:
+
+```sh
+pyinstaller --onefile --noconsole --icon=icon.ico app.py
+```
+
+### 8. Solução para Problemas de Compatibilidade com Python 3.12
+
+Se você encontrar problemas de compatibilidade com a versão do Python, como mostrado na mensagem de erro:
+
+```sh
+The current project's supported Python range (>=3.12,<4.0) is not compatible with some of the required packages Python requirement:
+  - pyinstaller requires Python <3.13,>=3.8, so it will not be satisfied for Python >=3.13,<4.0
+```
+
+Você pode ajustar a versão do Python utilizada no seu projeto. Uma maneira de fazer isso é criar um ambiente virtual com uma versão compatível do Python. Certifique-se de que a versão do Python instalada é compatível com PyInstaller (por exemplo, Python 3.11).
+
+### 9. Criando um Ambiente Virtual com uma Versão Específica do Python
+
+Se você estiver usando `pyenv` ou `virtualenv`, pode criar um ambiente virtual com uma versão específica do Python. Exemplo com `pyenv`:
+
+```sh
+pyenv install 3.11.4
+pyenv virtualenv 3.11.4 myenv
+pyenv activate myenv
+```
+
+Ou com `virtualenv`:
+
+```sh
+virtualenv -p python3.11 myenv
+source myenv/bin/activate  # No Windows, use `myenv\Scripts\activate`
+```
+
+### 10. Instalando Dependências no Ambiente Virtual
+
+Depois de ativar o ambiente virtual, instale as dependências necessárias:
+
+```sh
+pip install pyinstaller
+```
+
+### 11. Criando o Executável no Ambiente Virtual
+
+Agora, crie o executável usando o PyInstaller no ambiente virtual:
+
+```sh
+pyinstaller --onefile --noconsole --icon=icon.ico app.py
+```
+
+## Conclusão
+
+Neste passo a passo, criamos uma aplicação simples usando Tkinter e a convertimos em um executável utilizando PyInstaller. Também abordamos como resolver problemas de compatibilidade de versão do Python usando ambientes virtuais e como garantir que o arquivo de ícone esteja no caminho correto. Com esses conhecimentos, você pode desenvolver e distribuir suas próprias aplicações Python com interfaces gráficas de forma eficiente.
+
+## Referências
+
+- [Documentação do Tkinter](https://docs.python.org/3/library/tkinter.html)
+- [Documentação do PyInstaller](https://pyinstaller.readthedocs.io/en/stable/)
+- [Python Virtual Environments](https://docs.python.org/3/tutorial/venv.html)
