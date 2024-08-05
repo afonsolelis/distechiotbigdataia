@@ -916,6 +916,92 @@ root.mainloop()
     }
 </style>
 
+<h1 id="pratica">Prática</h1>
+<h2 id="passo-a-passo-criacao-de-uma-aplicacao-simples-com-tkinter-e-pyinstaller">Passo a Passo: Criação de uma Aplicação Simples com Tkinter e PyInstaller</h2>
+<h3 id="1-instalacao-do-python">1. Instalação do Python</h3>
+<p>Certifique-se de ter o Python instalado em sua máquina. Você pode baixá-lo do site oficial <a href="https://www.python.org/">python.org</a>.</p>
+<h3 id="2-criando-o-script-tkinter">2. Criando o Script Tkinter</h3>
+<p>Crie um arquivo Python chamado <code>app.py</code> e adicione o seguinte código:</p>
+<pre><code class="language-python">import tkinter as tk
+
+def mostrar_texto():
+    texto = entrada.get()
+    label.config(text=texto)
+
+# Criação da janela principal
+root = tk.Tk()
+root.title(&quot;Minha Aplicação Tkinter&quot;)
+
+# Entrada de Texto
+entrada = tk.Entry(root)
+entrada.pack(padx=10, pady=10)
+
+# Botão
+botao = tk.Button(root, text=&quot;Mostrar Texto&quot;, command=mostrar_texto)
+botao.pack(padx=10, pady=10)
+
+# Rótulo
+label = tk.Label(root, text=&quot;&quot;)
+label.pack(padx=10, pady=10)
+
+# Iniciando o mainloop
+root.mainloop()
+</code></pre>
+<p>Este script cria uma janela simples com um campo de entrada de texto, um botão e um rótulo que exibe o texto inserido.</p>
+<h3 id="3-executando-o-script">3. Executando o Script</h3>
+<p>Para testar a aplicação, execute o script com o comando:</p>
+<pre><code class="language-sh">python app.py
+</code></pre>
+<h3 id="4-instalacao-do-pyinstaller">4. Instalação do PyInstaller</h3>
+<p>Instale o PyInstaller usando o <code>pip</code>:</p>
+<pre><code class="language-sh">pip install pyinstaller
+</code></pre>
+<h3 id="5-criando-o-executavel">5. Criando o Executável</h3>
+<p>Para criar um executável básico, use o comando:</p>
+<pre><code class="language-sh">pyinstaller app.py
+</code></pre>
+<p>Este comando cria um diretório <code>dist</code> contendo o executável e todas as bibliotecas necessárias.</p>
+<h3 id="6-criando-um-executavel-unico">6. Criando um Executável Único</h3>
+<p>Para criar um único arquivo executável, use a opção <code>--onefile</code>:</p>
+<pre><code class="language-sh">pyinstaller --onefile app.py
+</code></pre>
+<h3 id="7-criando-um-executavel-sem-console-e-com-icone-personalizado">7. Criando um Executável sem Console e com Ícone Personalizado</h3>
+<p>Para criar um executável que não abre uma janela de console e usa um ícone personalizado, você precisa garantir que o arquivo de ícone (<code>icon.ico</code>) esteja no caminho correto. Coloque o arquivo <code>icon.ico</code> no mesmo diretório que o seu script <code>app.py</code>. Em seguida, use as opções <code>--noconsole</code> e <code>--icon</code>:</p>
+<pre><code class="language-sh">pyinstaller --onefile --noconsole --icon=icon.ico app.py
+</code></pre>
+<h3 id="8-solucao-para-problemas-de-compatibilidade-com-python-312">8. Solução para Problemas de Compatibilidade com Python 3.12</h3>
+<p>Se você encontrar problemas de compatibilidade com a versão do Python, como mostrado na mensagem de erro:</p>
+<pre><code class="language-sh">The current project's supported Python range (&gt;=3.12,&lt;4.0) is not compatible with some of the required packages Python requirement:
+  - pyinstaller requires Python &lt;3.13,&gt;=3.8, so it will not be satisfied for Python &gt;=3.13,&lt;4.0
+</code></pre>
+<p>Você pode ajustar a versão do Python utilizada no seu projeto. Uma maneira de fazer isso é criar um ambiente virtual com uma versão compatível do Python. Certifique-se de que a versão do Python instalada é compatível com PyInstaller (por exemplo, Python 3.11).</p>
+<h3 id="9-criando-um-ambiente-virtual-com-uma-versao-especifica-do-python">9. Criando um Ambiente Virtual com uma Versão Específica do Python</h3>
+<p>Se você estiver usando <code>pyenv</code> ou <code>virtualenv</code>, pode criar um ambiente virtual com uma versão específica do Python. Exemplo com <code>pyenv</code>:</p>
+<pre><code class="language-sh">pyenv install 3.11.4
+pyenv virtualenv 3.11.4 myenv
+pyenv activate myenv
+</code></pre>
+<p>Ou com <code>virtualenv</code>:</p>
+<pre><code class="language-sh">virtualenv -p python3.11 myenv
+source myenv/bin/activate  # No Windows, use `myenv\Scripts\activate`
+</code></pre>
+<h3 id="10-instalando-dependencias-no-ambiente-virtual">10. Instalando Dependências no Ambiente Virtual</h3>
+<p>Depois de ativar o ambiente virtual, instale as dependências necessárias:</p>
+<pre><code class="language-sh">pip install pyinstaller
+</code></pre>
+<h3 id="11-criando-o-executavel-no-ambiente-virtual">11. Criando o Executável no Ambiente Virtual</h3>
+<p>Agora, crie o executável usando o PyInstaller no ambiente virtual:</p>
+<pre><code class="language-sh">pyinstaller --onefile --noconsole --icon=icon.ico app.py
+</code></pre>
+<h2 id="conclusao">Conclusão</h2>
+<p>Neste passo a passo, criamos uma aplicação simples usando Tkinter e a convertimos em um executável utilizando PyInstaller. Também abordamos como resolver problemas de compatibilidade de versão do Python usando ambientes virtuais e como garantir que o arquivo de ícone esteja no caminho correto. Com esses conhecimentos, você pode desenvolver e distribuir suas próprias aplicações Python com interfaces gráficas de forma eficiente.</p>
+<h2 id="referencias">Referências</h2>
+<ul>
+<li><a href="https://docs.python.org/3/library/tkinter.html">Documentação do Tkinter</a></li>
+<li><a href="https://pyinstaller.readthedocs.io/en/stable/">Documentação do PyInstaller</a></li>
+<li><a href="https://docs.python.org/3/tutorial/venv.html">Python Virtual Environments</a></li>
+</ul>
+
 
 
 
