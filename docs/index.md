@@ -4,7 +4,7 @@
 
 Neste servidor vocês podem estudar, ver vagas de emprego e tirar dúvidas com o professor.
 
-# Sala: 🕹️ Lab4 Principal
+# Sala: 🕹️ Lab7 Principal
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQp88zM4qBed7UudJY9xW56ADiDGOrabMz1dT_dh28b0G_nUwybzxDRXpTWNiq4o8MncU8FoSdyI3C3/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
