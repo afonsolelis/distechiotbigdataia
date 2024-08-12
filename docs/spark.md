@@ -166,6 +166,6 @@ write_time = time.time() - start_time
 print(f"Tempo de escrita em Parquet com Pandas: {write_time} segundos")
 ```
 
-# Discuta: O que é diferente?
+# Prática
 
-
+<p style="text-align: justify;">Entre no <a href="https://www.kaggle.com/datasets">Kaggle</a>, crie uma conta (pode ser com o seu e-mail google) e escolha um dataset em .csv. Inicie o spark ou jupyter e transforme este csv para parquet.</p>
