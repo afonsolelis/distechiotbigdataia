@@ -1,6 +1,6 @@
 # Comunidade Estudos Dev
 
-<a href="https://discord.gg/ARWA2FMz" class="btn btn-info" style="color: white; font-weight: bold;" target="blank_">💻 Discord</a>
+<a href="https://discord.gg/kANeMg6j" class="btn btn-info" style="color: white; font-weight: bold;" target="blank_">💻 Discord</a>
 
 Neste servidor vocês podem estudar, ver vagas de emprego e tirar dúvidas com o professor.
 
