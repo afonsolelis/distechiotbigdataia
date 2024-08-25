@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build: .
+    ports:
+      - "8888:8888"   # Porta para o Jupyter Notebook
+      - "4040:4040"   # Porta para o Spark UI
+    volumes:
+      - ./csv:/home/jovyan/work/csv
+      - ./parquet:/home/jovyan/work/parquet
+      - ./work:/home/jovyan/work
