@@ -9,18 +9,20 @@
       
       
       
+        <link rel="prev" href="../spark/">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
-        <title>Fundbd - 💾 Disruptive Architectures: IOT, Big Data e IA 💾</title>
+        <title>Projetos Práticos de Big Data - 💾 Disruptive Architectures: IOT, Big Data e IA 💾</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.76a95c52.min.css">
       
       
 
@@ -57,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#aula-de-projeto-pratico-de-bigdata" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -89,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fundbd
+              Projetos Práticos de Big Data
             
           </span>
         </div>
@@ -255,6 +262,75 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Projetos Práticos de Big Data
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Projetos Práticos de Big Data
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-tudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antes de Tudo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -272,6 +348,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-tudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antes de Tudo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -286,9 +381,83 @@
                   
 
 
-  <h1>Fundbd</h1>
+<h1 id="aula-de-projeto-pratico-de-bigdata">Aula de Projeto Prático de BigData</h1>
+<h2 id="antes-de-tudo">Antes de Tudo</h2>
+<ol>
+<li>Vamos criar o github do seu projeto individual. Entre no seu github (ou crie se não tiver) e crie um repositório novo com o nome de: <code>{nome}{sobrenome}bigdatafecaf</code>;</li>
+<li>Conecte-se com o seu github via replit;</li>
+</ol>
+<h1 id="vamos-iniciar-a-aula">Vamos Iniciar a Aula</h1>
+<ol>
+<li>Baixe o dataset daqui: <a href="https://www.kaggle.com/datasets/atulanandjha/temperature-readings-iot-devices/data">link</a>;</li>
+<li>Faça o upload para o replit;</li>
+<li>Rode o seguinte comando no shell:</li>
+</ol>
+<pre><code class="language-shell">poetry add streamlit pandas sqlalchemy psycopg2-binary plotly python-dotenv
+</code></pre>
+<ol>
+<li>Crie um <code>.env</code>:</li>
+</ol>
+<pre><code class="language-text">DATABASE_URL=xxxxxx
+</code></pre>
+<ol>
+<li>Desenvolva o script em <code>main.py</code>:</li>
+</ol>
+<pre><code class="language-python">import streamlit as st
+import pandas as pd
+from sqlalchemy import create_engine
+import plotly.express as px
 
-<p>Oi</p>
+
+# Função para criar conexão com o banco de dados
+def get_db_connection():
+    return create_engine(&quot;string de conexão&quot;)
+
+
+# Função para criar tabela no PostgreSQL
+def create_table(engine, df):
+    df.to_sql('temperature_logs', engine, if_exists='replace', index=False)
+
+
+# Upload do arquivo CSV
+st.title(&quot;Upload de Arquivo CSV&quot;)
+uploaded_file = st.file_uploader(&quot;Escolha um arquivo CSV&quot;, type=&quot;csv&quot;)
+
+if uploaded_file is not None:
+    # Leitura do arquivo CSV
+    df = pd.read_csv(uploaded_file)
+    st.write(&quot;Estrutura do Dataset:&quot;)
+    st.write(df.head())
+
+    # Conectar ao banco de dados
+    engine = get_db_connection()
+
+    # Criar tabela no PostgreSQL
+    create_table(engine, df)
+    st.success(&quot;Dados enviados para o banco de dados.&quot;)
+
+    # Ler dados do banco de dados
+    query = &quot;SELECT * FROM temperature_logs&quot;
+    data = pd.read_sql(query, engine)
+
+    # Visualização dos dados com Plotly
+    st.title(&quot;Visualização dos Dados&quot;)
+    fig = px.line(data,
+                  x='noted_date',
+                  y='temp',
+                  title='Série Temporal de Temperaturas')
+    st.plotly_chart(fig)
+</code></pre>
+<ol>
+<li>
+<p>Execute o Streamlit e veja o gráfico.</p>
+</li>
+<li>
+<p>Faça git push e depois o deploy em render.com.</p>
+</li>
+</ol>
+<h2 id="vamos-para-o-recreio">Vamos para o Recreio!</h2>
+<h3 id="agora-e-a-sua-vez-inicie-o-projeto-e-mande-a-url-para-o-formulario-link">Agora é a sua vez, inicie o projeto, e mande a url para o formulário <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2BXsZJz8C-4PQsLUO9XzAzj1Us2djMD0OJLuYj1-wfYxOuw/viewform?usp=sf_link">link</a></h3>
 
 
 
