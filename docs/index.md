@@ -32,15 +32,17 @@ Neste servidor vocês podem estudar, ver vagas de emprego e tirar dúvidas com o
 
 # Avaliação
 
-| Pontuação| Avaliação                                      |Check?    |
-|----------|------------------------------------------------|----------|
-|   0,5    |Lógica dos Projetos Práticos de BigData e IA    |    ❌    |
-|   2,5    |Avaliação Multidisciplinar                      |    ❌    |
-|   1,0    |Avaliação Continuada                            |    ❌    |
-|   4,0    |Pipeline de Dados com IA                        |    ❌    |
-|   2,0    |Prova Teórica                                   |    ❌    |
+| Pontuação| Avaliação                                        |Check?    |
+|----------|--------------------------------------------------|----------|
+|   0,5    |Criação do Github do Projeto individual           |    ❌    |
+|   2,5    |Avaliação Multidisciplinar (Checkpoint de Projeto)|    ❌    |
+|   1,0    |Avaliação Continuada                              |    ❌    |
+|   4,0    |Pipeline de Dados com IA                          |    ❌    |
+|   2,0    |Prova Teórica                                     |    ❌    |
 
 ✔️❌
+
+
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
