@@ -1,0 +1,871 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../clickhouse/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Fundamentos de IA e Machine Learning - 💾 Disruptive Architectures: IOT, Big Data e IA 💾</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-introducao-a-inteligencia-artificial-ia" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="💾 Disruptive Architectures: IOT, Big Data e IA 💾" class="md-header__button md-logo" aria-label="💾 Disruptive Architectures: IOT, Big Data e IA 💾" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            💾 Disruptive Architectures: IOT, Big Data e IA 💾
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fundamentos de IA e Machine Learning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="💾 Disruptive Architectures: IOT, Big Data e IA 💾" class="md-nav__button md-logo" aria-label="💾 Disruptive Architectures: IOT, Big Data e IA 💾" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    💾 Disruptive Architectures: IOT, Big Data e IA 💾
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programação de Aulas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calendario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calendário
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundbig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentos e Ferramentas de Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processamento de Dados com Apache Spark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clickhouse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilização do ClickHouse para Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Fundamentos de IA e Machine Learning
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentos de IA e Machine Learning
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao-a-inteligencia-artificial-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução à Inteligência Artificial (IA)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-o-que-e-um-perceptron" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. O que é um Perceptron
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementacao-de-um-perceptron-em-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Implementação de um Perceptron em Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicacao-do-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicação do Código
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testando-o-perceptron" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testando o Perceptron
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agora-vamos-fazer-uma-implementacao-com-o-wine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agora vamos fazer uma implementação com o WINE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agora vamos fazer uma implementação com o WINE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-importar-as-bibliotecas-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Importar as Bibliotecas Necessárias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-carregar-e-pre-processar-o-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Carregar e Pré-processar o Dataset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-implementar-o-perceptron-com-scikit-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Implementar o Perceptron com scikit-learn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-treinar-o-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Treinar o Modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-avaliar-o-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Avaliar o Modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacao-do-codigo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicação do Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados-esperados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados Esperados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao-a-inteligencia-artificial-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução à Inteligência Artificial (IA)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-o-que-e-um-perceptron" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. O que é um Perceptron
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementacao-de-um-perceptron-em-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Implementação de um Perceptron em Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicacao-do-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicação do Código
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testando-o-perceptron" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testando o Perceptron
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agora-vamos-fazer-uma-implementacao-com-o-wine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agora vamos fazer uma implementação com o WINE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agora vamos fazer uma implementação com o WINE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-importar-as-bibliotecas-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Importar as Bibliotecas Necessárias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-carregar-e-pre-processar-o-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Carregar e Pré-processar o Dataset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-implementar-o-perceptron-com-scikit-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Implementar o Perceptron com scikit-learn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-treinar-o-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Treinar o Modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-avaliar-o-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Avaliar o Modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacao-do-codigo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicação do Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados-esperados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultados Esperados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>Para criar um tutorial sobre o funcionamento básico da Inteligência Artificial (IA) e do perceptron, vamos abordar os seguintes tópicos:</p>
+<ol>
+<li><strong>Introdução à Inteligência Artificial (IA)</strong>: Uma visão geral da IA e seus conceitos fundamentais.</li>
+<li><strong>O que é um Perceptron</strong>: Explicação sobre o perceptron, o neurônio básico de uma rede neural.</li>
+<li><strong>Implementação de um Perceptron em Python</strong>: Um exemplo prático de como implementar um perceptron simples usando Python.</li>
+</ol>
+<h3 id="1-introducao-a-inteligencia-artificial-ia">1. Introdução à Inteligência Artificial (IA)</h3>
+<p>A Inteligência Artificial (IA) é um ramo da ciência da computação que se concentra em criar sistemas capazes de realizar tarefas que, normalmente, exigiriam inteligência humana. Essas tarefas incluem reconhecimento de fala, aprendizado, planejamento e resolução de problemas.</p>
+<p>IA pode ser dividida em duas categorias principais:</p>
+<ul>
+<li><strong>IA Estreita (Narrow AI)</strong>: Projetada para executar uma tarefa específica, como reconhecimento de imagem ou processamento de linguagem natural. Exemplo: assistentes virtuais como Siri ou Alexa.</li>
+<li><strong>IA Geral (General AI)</strong>: Uma IA que poderia executar qualquer tarefa cognitiva que um ser humano pode. Este nível de IA ainda está no campo teórico e não foi alcançado.</li>
+</ul>
+<h3 id="2-o-que-e-um-perceptron">2. O que é um Perceptron</h3>
+<p>Um <strong>perceptron</strong> é um modelo matemático que tenta simular o comportamento de um neurônio biológico. Ele é o bloco de construção básico das redes neurais artificiais. O perceptron recebe múltiplas entradas, aplica pesos a elas, soma essas entradas ponderadas e, em seguida, passa o resultado através de uma função de ativação para produzir uma saída.</p>
+<p>A fórmula básica do perceptron é:</p>
+<p>[
+\text{Saída} = f(w_1 \cdot x_1 + w_2 \cdot x_2 + ... + w_n \cdot x_n + b)
+]</p>
+<p>onde:
+- ( x_1, x_2, ..., x_n ) são as entradas,
+- ( w_1, w_2, ..., w_n ) são os pesos associados a cada entrada,
+- ( b ) é o bias,
+- ( f ) é a função de ativação (geralmente uma função degrau ou sigmoide).</p>
+<h3 id="3-implementacao-de-um-perceptron-em-python">3. Implementação de um Perceptron em Python</h3>
+<p>Vamos implementar um perceptron simples que aprende a realizar uma operação lógica AND. A operação AND retorna 1 se ambas as entradas forem 1, caso contrário, retorna 0.</p>
+<pre><code class="language-python">import numpy as np
+
+# Função de ativação - Degrau
+def step_function(x):
+    return 1 if x &gt;= 0 else 0
+
+# Classe Perceptron
+class Perceptron:
+    def __init__(self, input_size, learning_rate=0.1, epochs=1000):
+        self.weights = np.zeros(input_size + 1)  # Pesos inicializados com 0
+        self.learning_rate = learning_rate
+        self.epochs = epochs
+
+    def predict(self, x):
+        # Adiciona o bias (termo de interceptação)
+        x = np.insert(x, 0, 1)
+        # Calcula a soma ponderada e aplica a função de ativação
+        weighted_sum = np.dot(self.weights, x)
+        return step_function(weighted_sum)
+
+    def fit(self, X, y):
+        # Treinamento do perceptron
+        for _ in range(self.epochs):
+            for i in range(y.size):
+                prediction = self.predict(X[i])
+                # Calcula o erro
+                error = y[i] - prediction
+                # Atualiza os pesos
+                self.weights[1:] += self.learning_rate * error * X[i]
+                self.weights[0] += self.learning_rate * error
+
+# Dados de treinamento para a operação AND
+X = np.array([
+    [0, 0],
+    [0, 1],
+    [1, 0],
+    [1, 1]
+])
+
+# Labels correspondentes
+y = np.array([0, 0, 0, 1])
+
+# Cria o perceptron
+perceptron = Perceptron(input_size=2)
+
+# Treina o perceptron
+perceptron.fit(X, y)
+
+# Testa o perceptron
+print(&quot;Pesos finais:&quot;, perceptron.weights)
+print(&quot;Predição para [0, 0]:&quot;, perceptron.predict([0, 0]))
+print(&quot;Predição para [0, 1]:&quot;, perceptron.predict([0, 1]))
+print(&quot;Predição para [1, 0]:&quot;, perceptron.predict([1, 0]))
+print(&quot;Predição para [1, 1]:&quot;, perceptron.predict([1, 1]))
+</code></pre>
+<h3 id="explicacao-do-codigo">Explicação do Código</h3>
+<ul>
+<li><strong>Função de Ativação</strong>: Utilizamos uma função degrau simples que retorna 1 se a entrada é maior ou igual a 0, caso contrário retorna 0.</li>
+<li><strong>Classe Perceptron</strong>: Esta classe define o perceptron. O método <code>__init__</code> inicializa os pesos, a taxa de aprendizado, e o número de épocas. O método <code>predict</code> calcula a saída do perceptron, e o método <code>fit</code> ajusta os pesos durante o treinamento.</li>
+<li><strong>Treinamento</strong>: O perceptron é treinado utilizando o algoritmo de aprendizado supervisionado, onde os pesos são atualizados de acordo com o erro (diferença entre a previsão e o valor real).</li>
+</ul>
+<h3 id="testando-o-perceptron">Testando o Perceptron</h3>
+<p>Após o treinamento, o perceptron deve ser capaz de prever corretamente o resultado da operação AND:</p>
+<pre><code>Pesos finais: [bias, peso1, peso2]
+Predição para [0, 0]: 0
+Predição para [0, 1]: 0
+Predição para [1, 0]: 0
+Predição para [1, 1]: 1
+</code></pre>
+<p>Vamos avançar um pouco mais e utilizar um dataset mais complexo para demonstrar o uso de um perceptron na classificação de vinhos. Usaremos o dataset de vinhos disponível na biblioteca <code>scikit-learn</code>, que contém características químicas de diferentes tipos de vinho e os classifica em três categorias.</p>
+<h1 id="agora-vamos-fazer-uma-implementacao-com-o-wine">Agora vamos fazer uma implementação com o WINE</h1>
+<ol>
+<li><strong>Importar as Bibliotecas Necessárias</strong>: Vamos usar o <code>scikit-learn</code> para carregar o dataset e realizar a separação dos dados.</li>
+<li><strong>Pré-processamento dos Dados</strong>: Normalizar os dados para melhorar o desempenho do perceptron.</li>
+<li><strong>Implementar o Perceptron com <code>scikit-learn</code></strong>: Utilizar a classe <code>Perceptron</code> do <code>scikit-learn</code>.</li>
+<li><strong>Treinar o Modelo</strong>: Usar uma parte dos dados para treinar o modelo.</li>
+<li><strong>Avaliar o Modelo</strong>: Testar o modelo com os dados de teste e avaliar sua acurácia.</li>
+</ol>
+<h3 id="1-importar-as-bibliotecas-necessarias">1. Importar as Bibliotecas Necessárias</h3>
+<p>Vamos começar importando as bibliotecas:</p>
+<pre><code class="language-python">import numpy as np
+from sklearn.datasets import load_wine
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import Perceptron
+from sklearn.metrics import accuracy_score, classification_report
+</code></pre>
+<h3 id="2-carregar-e-pre-processar-o-dataset">2. Carregar e Pré-processar o Dataset</h3>
+<p>Carregar o dataset de vinhos e dividir em conjuntos de treinamento e teste:</p>
+<pre><code class="language-python"># Carregar o dataset de vinhos
+data = load_wine()
+X = data.data
+y = data.target
+
+# Dividir o dataset em conjuntos de treinamento e teste
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Normalizar os dados
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+</code></pre>
+<h3 id="3-implementar-o-perceptron-com-scikit-learn">3. Implementar o Perceptron com <code>scikit-learn</code></h3>
+<p>Agora vamos utilizar a implementação de perceptron da biblioteca <code>scikit-learn</code>:</p>
+<pre><code class="language-python"># Criar o modelo Perceptron
+model = Perceptron(max_iter=1000, eta0=0.1, random_state=42)
+
+# Treinar o modelo
+model.fit(X_train, y_train)
+</code></pre>
+<h3 id="4-treinar-o-modelo">4. Treinar o Modelo</h3>
+<p>O treinamento é feito utilizando o método <code>.fit()</code> que ajusta o modelo aos dados de treinamento.</p>
+<pre><code class="language-python"># Prever nos dados de teste
+y_pred = model.predict(X_test)
+</code></pre>
+<h3 id="5-avaliar-o-modelo">5. Avaliar o Modelo</h3>
+<p>Podemos calcular a acurácia do modelo e imprimir um relatório de classificação:</p>
+<pre><code class="language-python"># Avaliar o modelo
+accuracy = accuracy_score(y_test, y_pred)
+print(f&quot;Acurácia do modelo: {accuracy:.2f}&quot;)
+
+# Relatório de classificação
+print(&quot;Relatório de Classificação:\n&quot;, classification_report(y_test, y_pred, target_names=data.target_names))
+</code></pre>
+<h3 id="explicacao-do-codigo_1">Explicação do Código</h3>
+<ul>
+<li><strong>Dataset de Vinho</strong>: O dataset contém 13 características químicas de diferentes vinhos, classificados em três categorias (classes).</li>
+<li><strong>Pré-processamento</strong>: Normalizamos os dados utilizando <code>StandardScaler</code> para que todas as características tenham a mesma escala, o que é importante para o treinamento do perceptron.</li>
+<li><strong>Perceptron</strong>: Utilizamos o perceptron do <code>scikit-learn</code>, que é uma implementação otimizada e eficiente do perceptron.</li>
+<li><strong>Acurácia</strong>: Calculamos a acurácia para medir a porcentagem de previsões corretas feitas pelo modelo.</li>
+</ul>
+<h3 id="resultados-esperados">Resultados Esperados</h3>
+<p>O perceptron deve ser capaz de classificar o vinho em uma das três categorias com uma acurácia razoável. O resultado pode variar dependendo da aleatoriedade no <code>train_test_split</code> e da inicialização dos pesos no perceptron.</p>
+<p>Exemplo de saída esperada:</p>
+<pre><code>Acurácia do modelo: 0.96
+Relatório de Classificação:
+               precision    recall  f1-score   support
+
+    class_0       0.97      1.00      0.99        16
+    class_1       0.97      0.88      0.92        25
+    class_2       0.94      1.00      0.97        13
+
+accuracy                           0.96        54
+macro avg       0.96      0.96      0.96        54
+weighted avg    0.96      0.96      0.96        54
+</code></pre>
+<h3 id="conclusao">Conclusão</h3>
+<p>Usando o perceptron, conseguimos realizar a classificação de vinhos com uma boa acurácia. Embora o perceptron seja um modelo simples, ele pode ser utilizado para resolver problemas de classificação linearmente separáveis. Para problemas mais complexos, redes neurais mais profundas e algoritmos mais sofisticados, como o <code>Multi-layer Perceptron</code> (MLP), são mais apropriados.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
