@@ -1,7 +1,7 @@
 site_name: "💾 Disruptive Architectures: IOT, Big Data e IA 💾"
 
-theme: material
-
+theme:
+  name: material
 nav:
   - "Programação de Aulas": index.md
   - "Calendário": calendario.md

@@ -1,3 +1,5 @@
+Vou ajustar as fórmulas para que fiquem formatadas corretamente em LaTeX.
+
 ### 1. Introdução à Inteligência Artificial (IA)
 
 A Inteligência Artificial (IA) é um ramo da ciência da computação que se concentra em criar sistemas capazes de realizar tarefas que, normalmente, exigiriam inteligência humana. Essas tarefas incluem reconhecimento de fala, aprendizado, planejamento e resolução de problemas.
@@ -13,15 +15,10 @@ Um **perceptron** é um modelo matemático que tenta simular o comportamento de 
 
 A fórmula básica do perceptron é:
 
-\[
-\text{Saída} = f(w_1 \cdot x_1 + w_2 \cdot x_2 + ... + w_n \cdot x_n + b)
-\]
+![perceptron](https://media.licdn.com/dms/image/v2/D4D12AQHJK385DbGo2g/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1686888552617?e=1730937600&v=beta&t=6Y3J8bXsv5tJkGg59gTaO7WVsc5c4lI2u_YG1I85CNE)
 
-onde:
-- \( x_1, x_2, ..., x_n \) são as entradas,
-- \( w_1, w_2, ..., w_n \) são os pesos associados a cada entrada,
-- \( b \) é o bias,
-- \( f \) é a função de ativação (geralmente uma função degrau ou sigmoide).
+![formula](https://media.licdn.com/dms/image/v2/D4D12AQHFDLpAut87Ag/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1686924043256?e=1730937600&v=beta&t=tREBkmt34Kn4Kp8clGsQlSqu33hAYho8uXEHeoTHPQw)
+
 
 ### 3. Implementação de um Perceptron em Python
 
@@ -104,7 +101,7 @@ Predição para [1, 1]: 1
 
 Vamos avançar um pouco mais e utilizar um dataset mais complexo para demonstrar o uso de um perceptron na classificação de vinhos. Usaremos o dataset de vinhos disponível na biblioteca `scikit-learn`, que contém características químicas de diferentes tipos de vinho e os classifica em três categorias.
 
-# Agora vamos fazer uma implementação com o WINE
+### Implementação com o Dataset de Vinho
 
 1. **Importar as Bibliotecas Necessárias**: Vamos usar o `scikit-learn` para carregar o dataset e realizar a separação dos dados.
 2. **Pré-processamento dos Dados**: Normalizar os dados para melhorar o desempenho do perceptron.
@@ -193,7 +190,9 @@ Exemplo de saída esperada:
 
 ```
 Acurácia do modelo: 0.96
-Relatório de Classificação:
+Relatório
+
+ de Classificação:
                precision    recall  f1-score   support
 
     class_0       0.97      1.00      0.99        16
@@ -205,6 +204,6 @@ macro avg       0.96      0.96      0.96        54
 weighted avg    0.96      0.96      0.96        54
 ```
 
-### Conclusão
+## Missão!
 
-Usando o perceptron, conseguimos realizar a classificação de vinhos com uma boa acurácia. Embora o perceptron seja um modelo simples, ele pode ser utilizado para resolver problemas de classificação linearmente separáveis. Para problemas mais complexos, redes neurais mais profundas e algoritmos mais sofisticados, como o `Multi-layer Perceptron` (MLP), são mais apropriados.
+Refaça os passos desta [publicação](https://www.linkedin.com/pulse/perceptron-fundamentos-funcionamento-e-aplica%C3%A7%C3%B5es-naomi-lago-/). Qual a pegada? Tem que achar este dataset na internet ou um similar. Procure no [Kaggle](https://www.kaggle.com/datasets)
