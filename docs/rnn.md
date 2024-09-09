@@ -346,3 +346,7 @@ futuro_predito = predict_future(model, data_normalized, seq_length, 30)  # Preve
 - **Avaliação**: Use métricas como RMSE ou MAE para quantificar a precisão das previsões.
 
 Esse passo a passo cobre os principais aspectos de uma RNN para previsão de séries temporais.
+
+# Vamos fazer uma de verdade agora! Neste [Link](https://colab.research.google.com/drive/1JCISkHG0ogpPBCKQoVOuzhMjS5qISXG9?usp=sharing)
+
+**Desafio:** Crie um RNN em casa para fazer a previsão de um arquivo que você vai procurar no Kaggle.
