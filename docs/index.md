@@ -34,7 +34,7 @@ Neste servidor vocês podem estudar, ver vagas de emprego e tirar dúvidas com o
 
 | Pontuação| Avaliação                                        |Check?    |
 |----------|--------------------------------------------------|----------|
-|   0,5    |Criação do Github do Projeto individual           |    ❌    |
+|   0,5    |Criação do Github do Projeto individual           |      ✔️  |
 |   2,5    |Avaliação Multidisciplinar (Checkpoint de Projeto)|    ❌    |
 |   1,0    |Avaliação Continuada                              |    ❌    |
 |   4,0    |Pipeline de Dados com IA                          |    ❌    |

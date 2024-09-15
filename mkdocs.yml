@@ -8,3 +8,4 @@ nav:
   - "Fundamentos e Ferramentas de Big Data": "fundbig.md"
   - "Processamento de Dados com Apache Spark": spark.md
   - "Projetos Práticos de Big Data": probig.md
+  - "Pipeline de Dados como Arquitetura Medalhão e Firebase": pipefirebase.md
