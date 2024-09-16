@@ -8,9 +8,6 @@ nav:
   - "Fundamentos e Ferramentas de Big Data": "fundbig.md"
   - "Processamento de Dados com Apache Spark": spark.md
   - "Projetos Práticos de Big Data": probig.md
-<<<<<<< HEAD
   - "Fundamentos de IA": fundia.md
   - "Redes Neurais Aplicadas": rnn.md
-=======
   - "Pipeline de Dados como Arquitetura Medalhão e Firebase": pipefirebase.md
->>>>>>> f2dc56606d4305f42a6b1ca188b5339123c6be72
