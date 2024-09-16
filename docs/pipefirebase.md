@@ -23,12 +23,7 @@ Aqui está o passo a passo adaptado para ser executado diretamente no Google Col
 
 2. **Subir as credenciais do Firebase**:
    - Baixe a chave de credenciais (arquivo JSON) do Firebase para o seu computador.
-   - Em seguida, faça o upload do arquivo JSON para o Colab:
-
-```python
-from google.colab import files
-uploaded = files.upload()  # Faça o upload do arquivo JSON aqui
-```
+   - Em seguida, faça o upload do arquivo JSON para o Colab
 
 ### Passo 2: Inicializar o Firebase Admin SDK
 
@@ -40,8 +35,11 @@ import firebase_admin
 from firebase_admin import credentials, firestore, storage
 import datetime
 
-# Substitua o nome do arquivo pelo nome correto do arquivo JSON enviado
-cred = credentials.Certificate('nome-do-arquivo-json.json')
+# Especificar o caminho do arquivo JSON que já está no Colab
+file_path = '/content/nome-do-arquivo-json.json'
+
+# Carregar as credenciais a partir do arquivo JSON
+cred = credentials.Certificate(file_path)
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'your-project-id.appspot.com'
 })
@@ -69,18 +67,18 @@ def read_files_from_storage():
 1. **Extrair e transformar os dados**:
    - Para cada arquivo lido, faça a transformação necessária para o formato especificado:
 
-   ```python
-   def process_file(contents, file_name):
-       linhas = contents.split('\n')
-       for linha in linhas:
-           data_transformada = {
-               'projeto': 'projeto1',  # Nome do projeto
-               'data_linha': {'linha': linha},  # Linha processada do arquivo
-               'tag': 'tag1',  # Tag específica
-               'data_ingestao': datetime.datetime.utcnow().isoformat()  # Data de ingestão
-           }
-           salvar_no_firestore(data_transformada)
-   ```
+```python
+def process_file(contents, file_name):
+    linhas = contents.split('\n')
+    for linha in linhas:
+        data_transformada = {
+            'projeto': 'projeto1',  # Nome do projeto
+            'data_linha': {'linha': linha},  # Linha processada do arquivo
+            'tag': 'tag1',  # Tag específica
+            'data_ingestao': datetime.datetime.utcnow().isoformat()  # Data de ingestão
+        }
+        salvar_no_firestore(data_transformada)
+```
 
 ### Passo 5: Carregar os Dados no Firestore
 

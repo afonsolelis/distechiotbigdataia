@@ -584,11 +584,8 @@
 <ol>
 <li><strong>Subir as credenciais do Firebase</strong>:</li>
 <li>Baixe a chave de credenciais (arquivo JSON) do Firebase para o seu computador.</li>
-<li>Em seguida, faça o upload do arquivo JSON para o Colab:</li>
+<li>Em seguida, faça o upload do arquivo JSON para o Colab</li>
 </ol>
-<pre><code class="language-python">from google.colab import files
-uploaded = files.upload()  # Faça o upload do arquivo JSON aqui
-</code></pre>
 <h3 id="passo-2-inicializar-o-firebase-admin-sdk">Passo 2: Inicializar o Firebase Admin SDK</h3>
 <ol>
 <li><strong>Inicializar o Firebase no Colab</strong>:</li>
@@ -598,8 +595,11 @@ uploaded = files.upload()  # Faça o upload do arquivo JSON aqui
 from firebase_admin import credentials, firestore, storage
 import datetime
 
-# Substitua o nome do arquivo pelo nome correto do arquivo JSON enviado
-cred = credentials.Certificate('nome-do-arquivo-json.json')
+# Especificar o caminho do arquivo JSON que já está no Colab
+file_path = '/content/nome-do-arquivo-json.json'
+
+# Carregar as credenciais a partir do arquivo JSON
+cred = credentials.Certificate(file_path)
 firebase_admin.initialize_app(cred, {
     'storageBucket': 'your-project-id.appspot.com'
 })
@@ -624,17 +624,17 @@ bucket = storage.bucket()
 <li><strong>Extrair e transformar os dados</strong>:</li>
 <li>Para cada arquivo lido, faça a transformação necessária para o formato especificado:</li>
 </ol>
-<p><code>python
-   def process_file(contents, file_name):
-       linhas = contents.split('\n')
-       for linha in linhas:
-           data_transformada = {
-               'projeto': 'projeto1',  # Nome do projeto
-               'data_linha': {'linha': linha},  # Linha processada do arquivo
-               'tag': 'tag1',  # Tag específica
-               'data_ingestao': datetime.datetime.utcnow().isoformat()  # Data de ingestão
-           }
-           salvar_no_firestore(data_transformada)</code></p>
+<pre><code class="language-python">def process_file(contents, file_name):
+    linhas = contents.split('\n')
+    for linha in linhas:
+        data_transformada = {
+            'projeto': 'projeto1',  # Nome do projeto
+            'data_linha': {'linha': linha},  # Linha processada do arquivo
+            'tag': 'tag1',  # Tag específica
+            'data_ingestao': datetime.datetime.utcnow().isoformat()  # Data de ingestão
+        }
+        salvar_no_firestore(data_transformada)
+</code></pre>
 <h3 id="passo-5-carregar-os-dados-no-firestore">Passo 5: Carregar os Dados no Firestore</h3>
 <ol>
 <li><strong>Salvar os dados transformados no Firestore</strong>:</li>
