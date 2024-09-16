@@ -1,0 +1,1122 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../fundia/">
+      
+      
+        <link rel="next" href="../pipefirebase/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Redes Neurais Aplicadas - 💾 Disruptive Architectures: IOT, Big Data e IA 💾</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#redes-neurais-aplicadas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="💾 Disruptive Architectures: IOT, Big Data e IA 💾" class="md-header__button md-logo" aria-label="💾 Disruptive Architectures: IOT, Big Data e IA 💾" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            💾 Disruptive Architectures: IOT, Big Data e IA 💾
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Redes Neurais Aplicadas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="💾 Disruptive Architectures: IOT, Big Data e IA 💾" class="md-nav__button md-logo" aria-label="💾 Disruptive Architectures: IOT, Big Data e IA 💾" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    💾 Disruptive Architectures: IOT, Big Data e IA 💾
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programação de Aulas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calendario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calendário
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundbig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentos e Ferramentas de Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processamento de Dados com Apache Spark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projetos Práticos de Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fundamentos de IA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Redes Neurais Aplicadas
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Redes Neurais Aplicadas
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aula-series-temporais-e-previsao-com-redes-neurais-recorrentes-rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aula: Séries Temporais e Previsão com Redes Neurais Recorrentes (RNN)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aula: Séries Temporais e Previsão com Redes Neurais Recorrentes (RNN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introducao-as-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução às Séries Temporais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-componentes-das-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Componentes das Séries Temporais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-analise-de-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Análise de Séries Temporais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Análise de Séries Temporais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-visualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Visualização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-decomposicao-da-serie-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Decomposição da Série Temporal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-diferenca-differencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. Diferença (Differencing)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-previsao-de-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Previsão de Séries Temporais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-redes-neurais-recorrentes-rnn-para-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Redes Neurais Recorrentes (RNN) para Séries Temporais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Redes Neurais Recorrentes (RNN) para Séries Temporais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-como-as-rnns-funcionam" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Como as RNNs Funcionam?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-limitacoes-das-rnns" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Limitações das RNNs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-construindo-uma-rnn-para-previsao-de-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Construindo uma RNN para Previsão de Séries Temporais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Construindo uma RNN para Previsão de Séries Temporais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-passo-1-preparar-os-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Passo 1: Preparar os Dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-passo-2-construir-o-modelo-rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Passo 2: Construir o Modelo RNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-passo-3-fazer-previsoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. Passo 3: Fazer Previsões
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rnn-debaixo-do-capo" class="md-nav__link">
+    <span class="md-ellipsis">
+      RNN Debaixo do Capô
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RNN Debaixo do Capô">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-consideracoes-finais" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Considerações Finais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipefirebase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pipeline de Dados como Arquitetura Medalhão e Firebase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aula-series-temporais-e-previsao-com-redes-neurais-recorrentes-rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aula: Séries Temporais e Previsão com Redes Neurais Recorrentes (RNN)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aula: Séries Temporais e Previsão com Redes Neurais Recorrentes (RNN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introducao-as-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução às Séries Temporais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-componentes-das-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Componentes das Séries Temporais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-analise-de-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Análise de Séries Temporais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Análise de Séries Temporais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-visualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Visualização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-decomposicao-da-serie-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Decomposição da Série Temporal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-diferenca-differencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. Diferença (Differencing)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-previsao-de-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Previsão de Séries Temporais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-redes-neurais-recorrentes-rnn-para-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Redes Neurais Recorrentes (RNN) para Séries Temporais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Redes Neurais Recorrentes (RNN) para Séries Temporais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-como-as-rnns-funcionam" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Como as RNNs Funcionam?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-limitacoes-das-rnns" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Limitações das RNNs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-construindo-uma-rnn-para-previsao-de-series-temporais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Construindo uma RNN para Previsão de Séries Temporais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Construindo uma RNN para Previsão de Séries Temporais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-passo-1-preparar-os-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Passo 1: Preparar os Dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-passo-2-construir-o-modelo-rnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Passo 2: Construir o Modelo RNN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-passo-3-fazer-previsoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. Passo 3: Fazer Previsões
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rnn-debaixo-do-capo" class="md-nav__link">
+    <span class="md-ellipsis">
+      RNN Debaixo do Capô
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RNN Debaixo do Capô">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-consideracoes-finais" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Considerações Finais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="redes-neurais-aplicadas">Redes Neurais Aplicadas</h1>
+<h3 id="aula-series-temporais-e-previsao-com-redes-neurais-recorrentes-rnn">Aula: Séries Temporais e Previsão com Redes Neurais Recorrentes (RNN)</h3>
+<h4 id="1-introducao-as-series-temporais">1. Introdução às Séries Temporais</h4>
+<p><strong>Definição:</strong><br />
+Uma <strong>série temporal</strong> é um conjunto de observações ordenadas no tempo. Essas observações são feitas em intervalos regulares, como horas, dias, semanas ou meses, e são muito utilizadas para modelar fenômenos que mudam com o tempo.</p>
+<p><img alt="imagem" src="https://wagon-public-datasets.s3.amazonaws.com/data-science-images/lectures/deep-learning/04/example_1.png" /></p>
+<p><strong>Exemplos de Séries Temporais:</strong>
+- Preço de ações ao longo do tempo
+- Vendas diárias de um produto
+- Temperatura registrada a cada hora
+- Demanda de energia elétrica</p>
+<p>Séries temporais possuem uma característica importante: os dados anteriores influenciam os valores futuros. Esse padrão temporal é o que torna as séries temporais diferentes de outros tipos de dados.</p>
+<h4 id="2-componentes-das-series-temporais">2. Componentes das Séries Temporais</h4>
+<p><img alt="imagem" src="https://wagon-public-datasets.s3.amazonaws.com/data-science-images/lectures/deep-learning/04/data_description/standard_time_series.png" /></p>
+<p>As séries temporais são compostas por quatro componentes principais:</p>
+<ol>
+<li>
+<p><strong>Tendência (Trend):</strong><br />
+   Movimento geral da série ao longo do tempo. Pode ser crescente, decrescente ou constante.</p>
+</li>
+<li>
+<p><strong>Sazonalidade (Seasonality):</strong><br />
+   Padrões que se repetem em intervalos de tempo regulares (diários, mensais, anuais, etc.). Exemplo: o aumento nas vendas durante o Natal.</p>
+</li>
+<li>
+<p><strong>Ciclos (Cycles):</strong><br />
+   Semelhante à sazonalidade, mas os ciclos não possuem intervalos de tempo fixos. Exemplo: ciclos econômicos.</p>
+</li>
+<li>
+<p><strong>Ruído (Noise):</strong><br />
+   Variações aleatórias nos dados, que não seguem nenhum padrão identificável.</p>
+</li>
+</ol>
+<h4 id="3-analise-de-series-temporais">3. Análise de Séries Temporais</h4>
+<p>Para analisar séries temporais, usamos diversas técnicas que ajudam a entender as características dos dados, identificar padrões e realizar previsões.</p>
+<h5 id="a-visualizacao">a. Visualização</h5>
+<p>A primeira etapa para analisar uma série temporal é visualizá-la. Isso ajuda a identificar a tendência, a sazonalidade e possíveis outliers.</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+plt.plot(series)
+plt.title('Série Temporal ao Longo do Tempo')
+plt.xlabel('Tempo')
+plt.ylabel('Valor')
+plt.show()
+</code></pre>
+<h5 id="b-decomposicao-da-serie-temporal">b. Decomposição da Série Temporal</h5>
+<p>A decomposição de uma série temporal separa a série em seus componentes: tendência, sazonalidade e ruído. Isso é útil para entender o comportamento de cada um desses fatores.</p>
+<p><img alt="imagem" src="https://wagon-public-datasets.s3.amazonaws.com/data-science-images/lectures/deep-learning/04/data_description/comparison.png" /></p>
+<pre><code class="language-python">from statsmodels.tsa.seasonal import seasonal_decompose
+result = seasonal_decompose(series, model='additive', period=12)
+result.plot()
+plt.show()
+</code></pre>
+<h5 id="c-diferenca-differencing">c. Diferença (Differencing)</h5>
+<p>Aplicamos a técnica de diferenciação para remover a tendência da série temporal. Isso torna a série estacionária, o que facilita a previsão.</p>
+<pre><code class="language-python">series_diff = series.diff().dropna()
+</code></pre>
+<h4 id="4-previsao-de-series-temporais">4. Previsão de Séries Temporais</h4>
+<p>Existem diversas formas de realizar previsões em séries temporais. Algumas das mais tradicionais são:</p>
+<ul>
+<li><strong>ARIMA (AutoRegressive Integrated Moving Average):</strong> Um dos métodos mais conhecidos e eficientes para dados lineares e estacionários.</li>
+<li><strong>Exponential Smoothing (Suavização Exponencial):</strong> Técnica usada para prever séries com sazonalidade.</li>
+</ul>
+<p>Contudo, quando as séries temporais são complexas e possuem muitos dados, redes neurais recorrentes (RNNs) são uma excelente opção.</p>
+<h4 id="5-redes-neurais-recorrentes-rnn-para-series-temporais">5. Redes Neurais Recorrentes (RNN) para Séries Temporais</h4>
+<p>As <strong>Redes Neurais Recorrentes (RNNs)</strong> são um tipo especial de rede neural projetada para lidar com dados sequenciais, como séries temporais. O poder das RNNs está em sua capacidade de "memorizar" informações anteriores, o que é essencial para entender e prever padrões temporais.</p>
+<h5 id="a-como-as-rnns-funcionam">a. Como as RNNs Funcionam?</h5>
+<p>As RNNs possuem uma estrutura em que a saída de um neurônio é alimentada de volta como entrada para o próximo neurônio na sequência. Isso permite que a rede capture dependências temporais. O loop nas RNNs permite que elas “lembrem” informações de estados anteriores, o que é crucial para previsões baseadas em séries temporais.</p>
+<h5 id="b-limitacoes-das-rnns">b. Limitações das RNNs</h5>
+<p>Embora poderosas, as RNNs têm limitações, especialmente quando se trata de longas dependências temporais. A medida que a sequência se torna muito longa, as informações passadas podem "se perder". Para resolver isso, variantes como LSTM (Long Short-Term Memory) e GRU (Gated Recurrent Unit) foram criadas.</p>
+<h4 id="6-construindo-uma-rnn-para-previsao-de-series-temporais">6. Construindo uma RNN para Previsão de Séries Temporais</h4>
+<p>Agora vamos construir um modelo de RNN para prever a demanda de um produto ao longo do tempo. Usaremos a biblioteca <strong>Keras</strong> para implementar o modelo.</p>
+<h5 id="a-passo-1-preparar-os-dados">a. Passo 1: Preparar os Dados</h5>
+<p>Os dados de uma série temporal precisam ser organizados em janelas de tempo (sequências) para alimentar a RNN.</p>
+<pre><code class="language-python">import numpy as np
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+
+# Carregar os dados
+data = pd.read_csv('demanda.csv')
+data = data['demanda'].values.reshape(-1, 1)
+
+# Normalizar os dados
+scaler = MinMaxScaler(feature_range=(0, 1))
+data_scaled = scaler.fit_transform(data)
+
+# Criar sequências
+def create_sequences(data, seq_length):
+    x, y = [], []
+    for i in range(len(data) - seq_length):
+        x.append(data[i:i+seq_length])
+        y.append(data[i+seq_length])
+    return np.array(x), np.array(y)
+
+seq_length = 10
+x, y = create_sequences(data_scaled, seq_length)
+
+# Dividir em treino e teste
+train_size = int(len(x) * 0.8)
+x_train, x_test = x[:train_size], x[train_size:]
+y_train, y_test = y[:train_size], y[train_size:]
+</code></pre>
+<h5 id="b-passo-2-construir-o-modelo-rnn">b. Passo 2: Construir o Modelo RNN</h5>
+<p>Usamos o Keras para construir o modelo RNN.</p>
+<pre><code class="language-python">from keras.models import Sequential
+from keras.layers import SimpleRNN, Dense
+
+# Criar o modelo
+model = Sequential()
+
+# Adicionar uma camada RNN
+model.add(SimpleRNN(units=50, activation='tanh', input_shape=(seq_length, 1)))
+
+# Adicionar uma camada densa de saída
+model.add(Dense(units=1))
+
+# Compilar o modelo
+model.compile(optimizer='adam', loss='mean_squared_error')
+
+# Treinar o modelo
+model.fit(x_train, y_train, epochs=50, batch_size=32)
+</code></pre>
+<h5 id="c-passo-3-fazer-previsoes">c. Passo 3: Fazer Previsões</h5>
+<p>Após o treinamento, podemos usar o modelo para fazer previsões.</p>
+<pre><code class="language-python"># Prever os dados de teste
+y_pred = model.predict(x_test)
+
+# Inverter a normalização para as previsões
+y_pred_inverse = scaler.inverse_transform(y_pred)
+y_test_inverse = scaler.inverse_transform(y_test)
+
+# Visualizar as previsões
+import matplotlib.pyplot as plt
+plt.plot(y_test_inverse, color='blue', label='Demanda Real')
+plt.plot(y_pred_inverse, color='red', label='Demanda Prevista')
+plt.title('Previsão de Demanda com RNN')
+plt.xlabel('Tempo')
+plt.ylabel('Demanda')
+plt.legend()
+plt.show()
+</code></pre>
+<h3 id="rnn-debaixo-do-capo">RNN Debaixo do Capô</h3>
+<p><img alt="imagem" src="https://wagon-public-datasets.s3.amazonaws.com/data-science-images/lectures/deep-learning/04/RNN_under_the_hood_full_no_seq.png" />
+<img alt="imagem" src="https://wagon-public-datasets.s3.amazonaws.com/data-science-images/06-DL/rnn_return_sequences_true.excalidraw.png" />
+<img alt="imagem" src="https://wagon-public-datasets.s3.amazonaws.com/data-science-images/lectures/deep-learning/04/sequence.png" /></p>
+<h4 id="7-consideracoes-finais">7. Considerações Finais</h4>
+<ul>
+<li><strong>Modelos mais complexos:</strong> Se os dados possuem dependências temporais longas, você pode considerar usar variantes mais avançadas, como <strong>LSTM</strong> ou <strong>GRU</strong>.</li>
+<li><strong>Ajuste de Hiperparâmetros:</strong> O número de unidades, camadas, tamanho de batch e número de épocas são parâmetros que precisam ser ajustados conforme a complexidade dos dados.</li>
+<li><strong>Escalabilidade:</strong> RNNs podem ser escaladas e usadas para previsões em tempo real em grandes volumes de dados, dependendo da arquitetura e da capacidade computacional.</li>
+</ul>
+<h1 id="vamos-treinar">Vamos Treinar!</h1>
+<h3 id="1-preparacao-dos-dados">1. Preparação dos Dados</h3>
+<p>Séries temporais geralmente consistem em uma sequência de observações em intervalos de tempo regulares, como vendas diárias ou mensais. O primeiro passo é organizar seus dados de uma forma que a RNN consiga aprender padrões temporais.</p>
+<h4 id="a-importando-as-bibliotecas-necessarias">a. Importando as Bibliotecas Necessárias</h4>
+<pre><code class="language-python">import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
+from keras.models import Sequential
+from keras.layers import Dense, SimpleRNN
+from sklearn.model_selection import train_test_split
+</code></pre>
+<h4 id="b-carregar-os-dados">b. Carregar os Dados</h4>
+<p>Assumindo que você tem um arquivo CSV com dados de demanda:</p>
+<pre><code class="language-python">data = pd.read_csv('demanda.csv')  # Ajuste o nome do arquivo
+</code></pre>
+<h4 id="c-exploracao-e-visualizacao-dos-dados">c. Exploração e Visualização dos Dados</h4>
+<pre><code class="language-python">plt.plot(data['demanda'])
+plt.title('Demanda ao longo do tempo')
+plt.xlabel('Tempo')
+plt.ylabel('Demanda')
+plt.show()
+</code></pre>
+<h4 id="d-normalizar-os-dados">d. Normalizar os Dados</h4>
+<p>RNNs funcionam melhor com dados normalizados (normalizados para um intervalo de 0 a 1).</p>
+<pre><code class="language-python">scaler = MinMaxScaler(feature_range=(0, 1))
+data_normalized = scaler.fit_transform(data['demanda'].values.reshape(-1, 1))
+</code></pre>
+<h4 id="e-criar-sequencias-de-entrada-e-saida">e. Criar Sequências de Entrada e Saída</h4>
+<p>As RNNs precisam de sequências de entrada, então você deve transformar a série temporal em janelas de tempo.</p>
+<pre><code class="language-python">def create_sequences(data, seq_length):
+    x = []
+    y = []
+    for i in range(len(data)-seq_length):
+        x.append(data[i:i+seq_length])
+        y.append(data[i+seq_length])
+    return np.array(x), np.array(y)
+
+seq_length = 10  # Janela de tempo de 10 dias, por exemplo
+x, y = create_sequences(data_normalized, seq_length)
+
+# Dividir os dados em treino e teste
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)
+</code></pre>
+<h3 id="2-construcao-da-rede-neural-recorrente-rnn">2. Construção da Rede Neural Recorrente (RNN)</h3>
+<p>Agora, vamos construir o modelo de RNN. Para previsões de séries temporais, usaremos uma camada de RNN simples.</p>
+<pre><code class="language-python">model = Sequential()
+
+# Camada RNN
+model.add(SimpleRNN(units=50, activation='tanh', input_shape=(seq_length, 1)))
+
+# Camada densa final
+model.add(Dense(units=1))
+
+# Compilar o modelo
+model.compile(optimizer='adam', loss='mean_squared_error')
+</code></pre>
+<ul>
+<li><code>units=50</code>: Este é o número de células de memória na RNN. Você pode ajustar para mais ou menos unidades conforme necessário.</li>
+<li><code>activation='tanh'</code>: A função de ativação <code>tanh</code> ajuda a regularizar a saída entre -1 e 1.</li>
+</ul>
+<h3 id="3-treinamento-do-modelo">3. Treinamento do Modelo</h3>
+<p>Agora, vamos treinar o modelo. Você pode ajustar o número de épocas conforme a quantidade de dados e complexidade do problema.</p>
+<pre><code class="language-python">history = model.fit(x_train, y_train, epochs=50, batch_size=32, validation_data=(x_test, y_test))
+</code></pre>
+<h3 id="4-avaliacao-do-modelo">4. Avaliação do Modelo</h3>
+<p>Podemos avaliar o desempenho do modelo e visualizar o processo de treinamento.</p>
+<pre><code class="language-python">plt.plot(history.history['loss'], label='Loss de Treino')
+plt.plot(history.history['val_loss'], label='Loss de Validação')
+plt.title('Perda ao longo do Treinamento')
+plt.xlabel('Época')
+plt.ylabel('Perda')
+plt.legend()
+plt.show()
+
+# Avaliar no conjunto de teste
+test_loss = model.evaluate(x_test, y_test)
+print(f'Loss no conjunto de teste: {test_loss}')
+</code></pre>
+<h3 id="5-fazer-previsoes">5. Fazer Previsões</h3>
+<p>Agora que o modelo está treinado, vamos fazer previsões usando os dados de teste.</p>
+<pre><code class="language-python">predictions = model.predict(x_test)
+
+# Inverter a normalização para voltar às unidades originais
+predictions = scaler.inverse_transform(predictions)
+y_test_inverted = scaler.inverse_transform(y_test)
+
+# Visualizar as previsões
+plt.plot(y_test_inverted, color='blue', label='Demanda Real')
+plt.plot(predictions, color='red', label='Demanda Prevista')
+plt.title('Previsão de Demanda')
+plt.xlabel('Tempo')
+plt.ylabel('Demanda')
+plt.legend()
+plt.show()
+</code></pre>
+<h3 id="6-ajustes-e-melhoria">6. Ajustes e Melhoria</h3>
+<ul>
+<li><strong>Unidades na RNN</strong>: Você pode aumentar ou diminuir o número de unidades na camada RNN.</li>
+<li><strong>Camadas Empilhadas</strong>: Adicionar mais camadas de RNN pode melhorar a capacidade de aprendizagem.</li>
+<li><strong>Parâmetros de Treinamento</strong>: Ajustar o <code>batch_size</code>, <code>epochs</code>, e até o otimizador.</li>
+</ul>
+<h3 id="7-implementacao-em-producao">7. Implementação em Produção</h3>
+<p>Para previsões futuras (não apenas em dados de teste), você pode usar a saída prevista como entrada para o próximo passo:</p>
+<pre><code class="language-python">def predict_future(model, data, seq_length, future_steps):
+    predictions = []
+    last_sequence = data[-seq_length:]
+
+    for _ in range(future_steps):
+        pred = model.predict(last_sequence.reshape(1, seq_length, 1))
+        predictions.append(pred)
+        last_sequence = np.append(last_sequence[1:], pred)
+
+    return scaler.inverse_transform(predictions)
+
+futuro_predito = predict_future(model, data_normalized, seq_length, 30)  # Prever para 30 dias
+</code></pre>
+<h3 id="consideracoes-finais">Considerações Finais</h3>
+<ul>
+<li><strong>Hiperparâmetros</strong>: Os hiperparâmetros, como o tamanho da sequência (<code>seq_length</code>), número de épocas, e unidades na RNN, devem ser ajustados com base nos seus dados.</li>
+<li><strong>Avaliação</strong>: Use métricas como RMSE ou MAE para quantificar a precisão das previsões.</li>
+</ul>
+<p>Esse passo a passo cobre os principais aspectos de uma RNN para previsão de séries temporais.</p>
+<h1 id="vamos-fazer-uma-de-verdade-agora-neste-link">Vamos fazer uma de verdade agora! Neste <a href="https://colab.research.google.com/drive/1JCISkHG0ogpPBCKQoVOuzhMjS5qISXG9?usp=sharing">Link</a></h1>
+<p><strong>Desafio:</strong> Crie um RNN em casa para fazer a previsão de um arquivo que você vai procurar no Kaggle.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
