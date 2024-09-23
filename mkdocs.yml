@@ -4,6 +4,7 @@ theme:
   name: material
 nav:
   - "Programação de Aulas": index.md
+  - "Projeto Final": projetofinal.md
   - "Calendário": calendario.md
   - "Fundamentos e Ferramentas de Big Data": "fundbig.md"
   - "Processamento de Dados com Apache Spark": spark.md
